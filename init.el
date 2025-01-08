@@ -189,6 +189,8 @@
  '(display-line-numbers 'relative)
  '(eglot-ignored-server-capabilities nil)
  '(indent-tabs-mode nil)
+ '(package-selected-packages
+   '(exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
  '(tool-bar-mode nil))
 
 (custom-set-faces
