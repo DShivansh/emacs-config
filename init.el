@@ -1,5 +1,5 @@
 (winner-mode 1)
-
+(setq visible-bell 1)
 (set-face-attribute 'default nil :height 160)
 (setq line-spacing 0.15)
 
@@ -136,9 +136,8 @@
   :init (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize)))
 
-(add-to-list 'custom-theme-load-path "/Users/shivansh.mishra/.emacs.d/themes/plain-theme")
-(add-to-list 'custom-theme-load-path "/Users/shivansh.mishra/.emacs.d/themes")
-
+(use-package plain-theme
+  :ensure t)
 
 ;; Returns the parent directory containing a .project.el file, if any,
 ;; to override the standard project.el detection logic when needed.
@@ -185,12 +184,12 @@
  '(company-show-quick-access t nil nil "Customized with use-package company")
  '(custom-enabled-themes '(plain))
  '(custom-safe-themes
-   '("46e9b34ca8971629e5ad94694d7a3894b587d8a8fd7c6703fa2fd51d4317ac91" "377b4637d47e2772e89205de5fdd2a79e21db4a9eca339f16ddbe3e4d9fc2868" default))
+   '("69d9245ceb3cb2e9b01e2367cff3c78abd30ebbc4387c0c45ac47e334a594ce1" "46e9b34ca8971629e5ad94694d7a3894b587d8a8fd7c6703fa2fd51d4317ac91" "377b4637d47e2772e89205de5fdd2a79e21db4a9eca339f16ddbe3e4d9fc2868" default))
  '(display-line-numbers 'relative)
  '(eglot-ignored-server-capabilities nil)
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
+   '(plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
  '(tool-bar-mode nil))
 
 (custom-set-faces
