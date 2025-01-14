@@ -65,9 +65,14 @@
   (setq whitespace-line-column 500)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
+;; clojure-mode
+(use-package cider
+  :ensure t)
+
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
+
 
 ;; git stuff
 (use-package magit
