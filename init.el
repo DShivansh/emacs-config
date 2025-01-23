@@ -3,11 +3,17 @@
 (set-face-attribute 'default nil :height 160)
 (setq line-spacing 0.15)
 
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups3/")))
+(setq auto-save-file-name-transforms `((".*" "~/.emacs.d/backups3/" t)))
+
 (ffap-bindings)
 (setq eldoc-echo-area-use-multiline-p nil)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
              ("melpa" . "https://melpa.org/packages/")
              ("elpy" . "https://jorgenschaefer.github.io/packages/")))
+
+(use-package almost-mono-themes
+  :ensure t)
 
 (use-package devil
   :ensure t
@@ -187,14 +193,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-show-quick-access t nil nil "Customized with use-package company")
- '(custom-enabled-themes '(plain))
+ '(custom-enabled-themes '(almost-mono-white))
  '(custom-safe-themes
-   '("69d9245ceb3cb2e9b01e2367cff3c78abd30ebbc4387c0c45ac47e334a594ce1" "46e9b34ca8971629e5ad94694d7a3894b587d8a8fd7c6703fa2fd51d4317ac91" "377b4637d47e2772e89205de5fdd2a79e21db4a9eca339f16ddbe3e4d9fc2868" default))
+   '("cbd85ab34afb47003fa7f814a462c24affb1de81ebf172b78cb4e65186ba59d2" "69d9245ceb3cb2e9b01e2367cff3c78abd30ebbc4387c0c45ac47e334a594ce1" "46e9b34ca8971629e5ad94694d7a3894b587d8a8fd7c6703fa2fd51d4317ac91" "377b4637d47e2772e89205de5fdd2a79e21db4a9eca339f16ddbe3e4d9fc2868" default))
  '(display-line-numbers 'relative)
  '(eglot-ignored-server-capabilities nil)
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
+   '(almost-mono-themes plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
  '(tool-bar-mode nil))
 
 (custom-set-faces
