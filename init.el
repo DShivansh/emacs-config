@@ -3,7 +3,7 @@
 (set-face-attribute 'default nil :height 160)
 (setq line-spacing 0.15)
 
-(setq backup-directory-alist `(("." . "~/.emacs.d/backups3/")))
+(setq backup-directory-alist `((".*" . "~/.emacs.d/backups3/")))
 (setq auto-save-file-name-transforms `((".*" "~/.emacs.d/backups3/" t)))
 
 (ffap-bindings)
@@ -73,6 +73,9 @@
 
 ;; clojure-mode
 (use-package cider
+  :ensure t)
+
+(use-package paredit
   :ensure t)
 
 (use-package expand-region
@@ -200,7 +203,7 @@
  '(eglot-ignored-server-capabilities nil)
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(almost-mono-themes plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
+   '(paredit almost-mono-themes plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
  '(tool-bar-mode nil))
 
 (custom-set-faces
