@@ -82,6 +82,9 @@
   :ensure t
   :bind ("C-=" . er/expand-region))
 
+(use-package go-mode
+  :ensure t)
+
 
 ;; git stuff
 (use-package magit
