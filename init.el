@@ -2,6 +2,7 @@
 (setq visible-bell 1)
 (set-face-attribute 'default nil :height 160)
 (setq line-spacing 0.15)
+(setq completion-styles '(flex basic))
 
 (setq backup-directory-alist `((".*" . "~/.emacs.d/backups3/")))
 (setq auto-save-file-name-transforms `((".*" "~/.emacs.d/backups3/" t)))
