@@ -13,6 +13,13 @@
              ("melpa" . "https://melpa.org/packages/")
              ("elpy" . "https://jorgenschaefer.github.io/packages/")))
 
+(use-package vterm
+  :ensure t)
+
+(use-package yaml-mode
+  :ensure t
+  :mode "\\.ya?ml\\'")
+
 (use-package almost-mono-themes
   :ensure t)
 
@@ -216,7 +223,7 @@
  '(eglot-ignored-server-capabilities nil)
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(perspective paredit almost-mono-themes plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
+   '(yaml-mode vterm perspective paredit almost-mono-themes plain-theme exec-path-from-shell consult marginalia vertico devil yasnippet which-key rainbow-delimiters magit lsp-java lsp-ivy kotlin-mode ivy-rich highlight-indent-guides helpful gruber-darker-theme go-mode expand-region evil-collection doom-themes counsel-projectile company cider))
  '(tool-bar-mode nil))
 
 (custom-set-faces
